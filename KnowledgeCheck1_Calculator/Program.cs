@@ -20,7 +20,9 @@ namespace KnowledgeCheck1_Calculator
             {
                 case "1":
                     Console.WriteLine("Enter 2 integers to add");
+                    Console.Write("First number: ");
                     var addNumber1 = Console.ReadLine();
+                    Console.Write("Second number: ");
                     var addNumber2 = Console.ReadLine();
 
                     if (int.TryParse(addNumber1, out int addNumOne) && int.TryParse(addNumber2, out int addNumTwo))
@@ -36,7 +38,9 @@ namespace KnowledgeCheck1_Calculator
 
                 case "2":
                     Console.WriteLine("Enter 2 integers to subtract");
+                    Console.Write("First number: ");
                     var subtractNumber1 = Console.ReadLine();
+                    Console.Write("Second number: ");
                     var subtractNumber2 = Console.ReadLine();
 
                     if (int.TryParse(subtractNumber1, out int subNumOne) && int.TryParse(subtractNumber2, out int subNumTwo))
@@ -51,12 +55,24 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "3":
-                    // Add code here
+                    Console.WriteLine("Enter 2 integers to multiply");
+                    Console.Write("First number: ");
+                    var multiplyNumber1 = Console.ReadLine();
+                    Console.Write("Second number: ");
+                    var multiplyNumber2 = Console.ReadLine();
+
+                    if(int.TryParse(multiplyNumber1, out int multNumOne) && int.TryParse(multiplyNumber2, out int multNumTwo))
+                    {
+                        Console.Write($"{multiplyNumber1} * {multiplyNumber2} = ");
+                        Console.Write(calculator.Multiply(multNumOne, multNumTwo));
+                    }
                     break;
 
                 case "4":
                     Console.WriteLine("Enter 2 integers to divide");
+                    Console.Write("First number: ");
                     var divideNumber1 = Console.ReadLine();
+                    Console.Write("Second number: ");
                     var divideNumber2 = Console.ReadLine();
 
                     if (double.TryParse(divideNumber1, out double divNumOne) && double.TryParse(divideNumber2, out double divNumTwo))
@@ -68,7 +84,6 @@ namespace KnowledgeCheck1_Calculator
                     {
                         Console.WriteLine("One or more of the numbers is not an int");
                     }
-                    break;
                     break;
 
                 default:
